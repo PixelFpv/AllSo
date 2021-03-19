@@ -1,3 +1,4 @@
+//Coś trzeba dopisać
 package com.example.myapplication10;
 
 import android.graphics.Bitmap;
