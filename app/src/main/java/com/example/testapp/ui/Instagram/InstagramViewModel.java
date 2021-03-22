@@ -1,16 +1,16 @@
-package com.example.testapp.ui.home;
+package com.example.testapp.ui.Instagram;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class InstagramViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel () {
+    public InstagramViewModel () {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is instagram fragment");
     }
 
     public LiveData<String> getText () {

@@ -1,4 +1,4 @@
-package com.example.testapp.ui.home;
+package com.example.testapp.ui.Facebook;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -9,26 +9,22 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.testapp.R;
 
-public class HomeFragment extends Fragment {
+public class FacebookFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-        View myView = inflater.inflate(R.layout.fragment_gallery, container, false);
+        View myView = inflater.inflate(R.layout.fragment_facebook, container, false);
 
         WebView myWebView = myView.findViewById(R.id.webView_yt);
-        myWebView.loadUrl("https://www.instagram.com/?hl=en");
+        myWebView.loadUrl("https://www.facebook.com/");
         WebSettings webSettings = myWebView.getSettings();
         myWebView.setWebViewClient(new WebViewClient()
         {            @Override

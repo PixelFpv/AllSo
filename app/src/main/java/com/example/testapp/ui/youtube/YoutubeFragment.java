@@ -1,4 +1,4 @@
-package com.example.testapp.ui.gallery;
+package com.example.testapp.ui.youtube;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -21,15 +21,11 @@ import androidx.fragment.app.Fragment;
 import com.example.testapp.R;
 
 
-public class GalleryFragment extends Fragment {
+public class YoutubeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-
-        View myView = inflater.inflate(R.layout.fragment_gallery, container, false);
-
-
+        View myView = inflater.inflate(R.layout.fragment_youtube, container, false);
         WebView myWebView = myView.findViewById(R.id.webView_yt);
         myWebView.loadUrl("https://www.youtube.com");
         WebSettings webSettings = myWebView.getSettings();
@@ -37,9 +33,7 @@ public class GalleryFragment extends Fragment {
         {            @Override
             public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
                 return false; }});
-
         webSettings.setJavaScriptEnabled(true);
-
         myWebView.setOnKeyListener(new View.OnKeyListener()
         {
             @Override
@@ -60,17 +54,9 @@ public class GalleryFragment extends Fragment {
                             break;
                     }
                 }
-
                 return false;
             }
         });
         return myView;
     }
-
-
-
 }
-
-
-
-
