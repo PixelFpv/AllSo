@@ -1,9 +1,14 @@
 package com.example.testapp.ui.slideshow;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,20 +21,46 @@ import com.example.testapp.R;
 
 public class SlideshowFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-    public View onCreateView (@NonNull LayoutInflater inflater,
-                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+        View myView = inflater.inflate(R.layout.fragment_gallery, container, false);
+
+        WebView myWebView = myView.findViewById(R.id.webView_yt);
+        myWebView.loadUrl("https://www.facebook.com/");
+        WebSettings webSettings = myWebView.getSettings();
+        myWebView.setWebViewClient(new WebViewClient()
+        {            @Override
+        public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
+            return false; }});
+
+        webSettings.setJavaScriptEnabled(true);
+
+        myWebView.setOnKeyListener(new View.OnKeyListener()
+        {
             @Override
-            public void onChanged (@Nullable String s) {
-                textView.setText(s);
+            public boolean onKey(View v, int keyCode, KeyEvent event)
+            {
+                if(event.getAction() == KeyEvent.ACTION_DOWN)
+                {
+                    WebView webView = (WebView) v;
+
+                    switch(keyCode)
+                    {
+                        case KeyEvent.KEYCODE_BACK:
+                            if(webView.canGoBack())
+                            {
+                                webView.goBack();
+                                return true;
+                            }
+                            break;
+                    }
+                }
+
+                return false;
             }
         });
-        return root;
+        return myView;
     }
 }

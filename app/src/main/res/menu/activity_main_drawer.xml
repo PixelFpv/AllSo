@@ -16,5 +16,9 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Facebook" />
+        <item
+            android:id="@+id/nav_tiktok"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="TikTok" />
     </group>
 </menu>
