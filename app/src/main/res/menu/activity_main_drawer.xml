@@ -18,5 +18,8 @@
         <item
             android:id="@+id/nav_tiktok"
             android:title="TikTok" />
+        <item
+            android:id="@+id/nav_twitter"
+            android:title="Twitter" />
     </group>
 </menu>
