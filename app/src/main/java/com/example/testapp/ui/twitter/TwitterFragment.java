@@ -24,7 +24,7 @@ public class TwitterFragment extends Fragment {
         View myView = inflater.inflate(R.layout.fragment_twitter, container, false);
 
         WebView myWebView = myView.findViewById(R.id.webView_yt);
-        myWebView.loadUrl("https://twitter.com/");
+        myWebView.loadUrl("https://twitter.com/home");
         WebSettings webSettings = myWebView.getSettings();
         myWebView.setWebViewClient(new WebViewClient()
         {            @Override
