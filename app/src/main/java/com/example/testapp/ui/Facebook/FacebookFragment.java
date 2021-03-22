@@ -53,10 +53,9 @@ public class FacebookFragment extends Fragment {
                             break;
                     }
                 }
-
-                return false;
-            }
+                return false;}
         });
+
         return myView;
     }
 }
