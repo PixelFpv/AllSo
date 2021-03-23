@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
     tools:showIn="navigation_view">
-
+    <item android:title="Social">
+        <menu>
     <group android:checkableBehavior="single">
 
         <item
@@ -22,5 +23,29 @@
         <item
             android:id="@+id/nav_twitter"
             android:title="Twitter" />
+        <item
+            android:id="@+id/nav_redit"
+            android:title="Redit" />
+
+
     </group>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Options">
+        <group android:checkableBehavior="single">
+        <menu>
+
+            <item
+                android:id="@+id/nav_settings"
+                android:title="Settings" />
+
+        </menu>
+        </group>
+    </item>
+
+
+
 </menu>

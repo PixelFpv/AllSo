@@ -32,5 +32,15 @@
         android:name="com.example.testapp.ui.twitter.TwitterFragment"
         android:label="Twitter"
         tools:layout="@layout/fragment_twitter"/>
+    <fragment
+        android:id="@+id/nav_redit"
+        android:name="com.example.testapp.ui.Redit.ReditFragment"
+        android:label="Redit"
+        tools:layout="@layout/fragment_redit"/>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.testapp.ui.Settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
 
 </navigation>

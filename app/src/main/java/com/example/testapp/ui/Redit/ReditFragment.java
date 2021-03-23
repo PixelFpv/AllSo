@@ -1,8 +1,5 @@
-package com.example.testapp.ui.twitter;
+package com.example.testapp.ui.Redit;
 
-import android.app.ActionBar;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -18,16 +15,16 @@ import androidx.fragment.app.Fragment;
 
 import com.example.testapp.R;
 
-public class TwitterFragment extends Fragment {
+public class ReditFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-        View myView = inflater.inflate(R.layout.fragment_twitter, container, false);
+        View myView = inflater.inflate(R.layout.fragment_redit, container, false);
 
         WebView myWebView = myView.findViewById(R.id.webView_yt);
-        myWebView.loadUrl("https://twitter.com/home");
+        myWebView.loadUrl("https://www.reddit.com/");
         WebSettings webSettings = myWebView.getSettings();
         myWebView.setWebViewClient(new WebViewClient()
         {            @Override
