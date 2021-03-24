@@ -23,6 +23,7 @@ public class InstagramFragment extends Fragment {
 
         View myView = inflater.inflate(R.layout.fragment_instagram, container, false);
 
+
         WebView myWebView = myView.findViewById(R.id.webView_yt);
         myWebView.loadUrl("https://www.instagram.com/?hl=en");
         WebSettings webSettings = myWebView.getSettings();

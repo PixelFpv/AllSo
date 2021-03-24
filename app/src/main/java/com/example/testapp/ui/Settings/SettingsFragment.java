@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.testapp.R;
 
+import org.w3c.dom.Text;
+
 public class SettingsFragment extends Fragment {
 
     @Override
@@ -23,38 +25,6 @@ public class SettingsFragment extends Fragment {
 
         View myView = inflater.inflate(R.layout.fragment_settings, container, false);
 
-//        WebView myWebView = myView.findViewById(R.id.webView_yt);
-//        myWebView.loadUrl("https://www.reddit.com/");
-//        WebSettings webSettings = myWebView.getSettings();
-//        myWebView.setWebViewClient(new WebViewClient()
-//        {            @Override
-//        public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
-//            return false; }});
-//
-//        webSettings.setJavaScriptEnabled(true);
-//
-//        myWebView.setOnKeyListener(new View.OnKeyListener()
-//        {
-//            @Override
-//            public boolean onKey(View v, int keyCode, KeyEvent event)
-//            {
-//                if(event.getAction() == KeyEvent.ACTION_DOWN)
-//                {
-//                    WebView webView = (WebView) v;
-//
-//                    switch(keyCode)
-//                    {
-//                        case KeyEvent.KEYCODE_BACK:
-//                            if(webView.canGoBack())
-//                            {
-//                                webView.goBack();
-//                                return true;
-//                            }
-//                            break;
-//                    }
-//                }
-//                return false;}
-//        });
 
         return myView;
     }
