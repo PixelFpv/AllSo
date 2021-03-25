@@ -22,7 +22,6 @@ import com.example.testapp.R;
 
 
 public class YoutubeFragment extends Fragment {
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View myView = inflater.inflate(R.layout.fragment_youtube, container, false);
@@ -34,6 +33,7 @@ public class YoutubeFragment extends Fragment {
             public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
                 return false; }});
         webSettings.setJavaScriptEnabled(true);
+
         myWebView.setOnKeyListener(new View.OnKeyListener()
         {
             @Override
