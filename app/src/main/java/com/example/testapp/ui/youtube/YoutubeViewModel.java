@@ -8,12 +8,11 @@ public class YoutubeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public YoutubeViewModel () {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+    public YoutubeViewModel (YoutubeFragment youtubeFragment) {
+
     }
 
-    public LiveData<String> getText () {
-        return mText;
+
+    public void GithubApiCall (String daljeet33) {
     }
 }

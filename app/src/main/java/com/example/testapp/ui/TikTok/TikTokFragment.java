@@ -20,7 +20,7 @@ public class TikTokFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-        View myView = inflater.inflate(R.layout.fragment_youtube, container, false);
+        View myView = inflater.inflate(R.layout.tiktok_fragment, container, false);
 
         WebView myWebView = myView.findViewById(R.id.webView_yt);
         myWebView.loadUrl("https://www.tiktok.com/en");

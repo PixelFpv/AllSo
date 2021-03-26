@@ -7,9 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-
-
     <WebView
         android:id="@+id/webView_yt"
         android:layout_width="match_parent"
