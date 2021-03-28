@@ -36,7 +36,7 @@
 
     <item android:title="Options">
         <group android:checkableBehavior="single">
-        <menu>
+            <menu>
 
             <item
                 android:id="@+id/nav_settings"
@@ -45,7 +45,6 @@
         </menu>
         </group>
     </item>
-
 
 
 </menu>

@@ -43,7 +43,6 @@ public class YoutubeFragment extends Fragment {
 
 
 
-
         myWebView.loadUrl("https://www.youtube.com");
         WebSettings webSettings = myWebView.getSettings();
         myWebView.setWebViewClient(new WebViewClient()
@@ -69,17 +68,6 @@ public class YoutubeFragment extends Fragment {
                             return true; }
                             break; } }
                 return false; }});
-
-
-
-//        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh () {
-//
-//
-//                refreshLayout.setRefreshing(false);
-//            }
-//        });
 
 
         return myView;

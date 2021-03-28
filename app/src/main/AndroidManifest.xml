@@ -11,13 +11,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_louncher_round"
         android:supportsRtl="true"
+        android:configChanges="orientation|screenSize"
+        android:resizeableActivity="true"
         android:theme="@style/Theme.TestApp">
-        <activity
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6158454719596294~5030720197"/>
+<activity
             android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/Theme.TestApp.NoActionBar">
-            <intent-filter>
+
+    <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
