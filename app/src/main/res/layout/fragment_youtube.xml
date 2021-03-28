@@ -8,15 +8,31 @@
         tools:context=".MainActivity">
 
 
-
-    <WebView
-            android:id="@+id/webView_yt"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-    </WebView>
+                <WebView
+                    android:id="@+id/webView_yt"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </WebView>
+
+                <fragment
+                    android:id="@+id/fragment"
+                    android:name="com.example.testapp.ui.Facebook.FacebookFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="425dp"
+                    android:layout_marginTop="300dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/webView_yt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </LinearLayout>
 
 

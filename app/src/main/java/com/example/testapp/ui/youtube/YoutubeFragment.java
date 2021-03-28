@@ -20,7 +20,9 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainer;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -29,6 +31,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
 import com.example.testapp.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class YoutubeFragment extends Fragment {
@@ -69,6 +77,7 @@ public class YoutubeFragment extends Fragment {
                             break; } }
                 return false; }});
 
+  
 
         return myView;
 

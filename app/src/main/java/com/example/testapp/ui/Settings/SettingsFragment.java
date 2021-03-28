@@ -30,14 +30,14 @@ public class SettingsFragment extends Fragment {
 
         View myView = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        MobileAds.initialize(getActivity(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        AdView mAdView = (AdView) myView.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        MobileAds.initialize(getActivity(), new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//            }
+//        });
+//        AdView mAdView = (AdView) myView.findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
 
 
