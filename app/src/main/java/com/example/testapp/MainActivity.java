@@ -1,17 +1,21 @@
 package com.example.testapp;
 
+import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.testapp.ui.Facebook.FacebookFragment;
 import com.example.testapp.ui.Instagram.InstagramFragment;
 //import com.google.android.gms.ads.AdRequest;
 //import com.google.android.gms.ads.AdView;
 //import com.google.android.gms.ads.MobileAds;
 //import com.google.android.gms.ads.initialization.InitializationStatus;
 //import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.example.testapp.ui.twitter.TwitterFragment;
+import com.example.testapp.ui.youtube.YoutubeFragment;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
@@ -30,7 +34,9 @@ import com.google.android.material.navigation.NavigationView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainer;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -44,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private DrawerLayout drawer;
-//    private AdView mAdView;
+
+
+
 
 
     @Override

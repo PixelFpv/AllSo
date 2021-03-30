@@ -10,4 +10,6 @@
     <string name="menu_home">Instagram</string>
     <string name="menu_gallery">YouTube</string>
     <string name="menu_slideshow">Facebook</string>
+
+    <string name="fragment_location">com.example.testapp.ui.Facebook.FacebookFragment</string>
 </resources>

@@ -1,56 +1,39 @@
 package com.example.testapp.ui.youtube;
 
-import android.content.ClipData;
-import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainer;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.fragment.app.FragmentManager;
 
 
 import com.example.testapp.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.testapp.ui.Facebook.FacebookFragment;
+
+import java.time.Instant;
 
 
 public class YoutubeFragment extends Fragment {
 
 
+    public static YoutubeFragment newInstance (String foo) {
+
+        return null;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View myView = inflater.inflate(R.layout.fragment_youtube, container, false);
         WebView myWebView = myView.findViewById(R.id.webView_yt);
-
-
-
         myWebView.loadUrl("https://www.youtube.com");
         WebSettings webSettings = myWebView.getSettings();
         myWebView.setWebViewClient(new WebViewClient()
@@ -59,6 +42,8 @@ public class YoutubeFragment extends Fragment {
         {   @Override
             public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
                 return false; }});
+
+
 
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
@@ -77,9 +62,11 @@ public class YoutubeFragment extends Fragment {
                             break; } }
                 return false; }});
 
-  
 
         return myView;
 
     }
+
+
+
 }
