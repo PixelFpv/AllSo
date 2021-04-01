@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setCheckedItem(R.id.nav_instagram);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_instagram, R.id.nav_youtube, R.id.nav_facebook, R.id.nav_tiktok,R.id.nav_twitter,R.id.nav_redit,R.id.nav_fragment)
+                R.id.nav_instagram, R.id.nav_youtube, R.id.nav_facebook, R.id.nav_tiktok,R.id.nav_twitter,R.id.nav_redit)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

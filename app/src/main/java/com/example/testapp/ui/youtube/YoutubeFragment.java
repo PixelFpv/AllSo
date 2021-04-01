@@ -15,6 +15,10 @@ import android.widget.ProgressBar;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
@@ -33,7 +37,7 @@ public class YoutubeFragment extends Fragment {
 
         View myView = inflater.inflate(R.layout.fragment_youtube, container, false);
         WebView myWebView = myView.findViewById(R.id.webView_yt);
-        myWebView.loadUrl("https://www.youtube.com");
+        myWebView.loadUrl("https://m.youtube.com");
         WebSettings webSettings = myWebView.getSettings();
         myWebView.setWebViewClient(new WebViewClient()
 
@@ -48,6 +52,8 @@ public class YoutubeFragment extends Fragment {
                 progressBar.setVisibility(View.GONE);
             }
         });
+
+
 
 
         SwipeRefreshLayout swipeRefreshLayout = myView.findViewById(R.id.swiperefresh);
@@ -85,14 +91,6 @@ public class YoutubeFragment extends Fragment {
                             return true; }
                             break; } }
                 return false; }});
-
-
-
-
         return myView;
-
     }
-
-
-
 }
