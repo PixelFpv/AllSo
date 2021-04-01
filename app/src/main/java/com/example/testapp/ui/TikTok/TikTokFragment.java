@@ -9,6 +9,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -29,6 +30,13 @@ public class TikTokFragment extends Fragment {
         {            @Override
         public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
             return false; }});
+
+        ProgressBar progressBar = myView.findViewById(R.id.progressBar);
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onPageFinished(WebView view, String url) {
+                progressBar.setVisibility(View.GONE);
+            }
+        });
 
         webSettings.setJavaScriptEnabled(true);
 

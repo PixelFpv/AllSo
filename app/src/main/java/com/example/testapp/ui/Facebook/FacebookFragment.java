@@ -9,9 +9,11 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.testapp.R;
 
@@ -30,6 +32,30 @@ public class FacebookFragment extends Fragment {
         {            @Override
         public boolean shouldOverrideUrlLoading (WebView view, WebResourceRequest request) {
             return false; }});
+
+        ProgressBar progressBar = myView.findViewById(R.id.progressBar);
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onPageFinished(WebView view, String url) {
+                progressBar.setVisibility(View.GONE);
+            }
+        });
+
+        SwipeRefreshLayout swipeRefreshLayout = myView.findViewById(R.id.swiperefresh);
+
+        String url = myWebView.getUrl();
+        swipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh () {
+                        myWebView.loadUrl(url);
+                        myWebView.setWebViewClient(new WebViewClient() {
+                            public void onPageFinished(WebView view, String url) {
+                                swipeRefreshLayout.setRefreshing(false);
+                            }
+                        });
+                    }
+                }
+        );
 
         webSettings.setJavaScriptEnabled(true);
 

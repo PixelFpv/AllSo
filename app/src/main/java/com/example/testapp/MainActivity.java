@@ -67,18 +67,14 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setCheckedItem(R.id.nav_instagram);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_instagram, R.id.nav_youtube, R.id.nav_facebook, R.id.nav_tiktok,R.id.nav_twitter,R.id.nav_redit)
+                R.id.nav_instagram, R.id.nav_youtube, R.id.nav_facebook, R.id.nav_tiktok,R.id.nav_twitter,R.id.nav_redit,R.id.nav_fragment)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-//        MobileAds.initialize(this, "ca-app-pub-6158454719596294~5030720197");
         View header = navigationView.getHeaderView(0);
-//        AdView adView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        adView.loadAd(adRequest);
 
 
 
